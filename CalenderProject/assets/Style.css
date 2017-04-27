@@ -1,0 +1,38 @@
+﻿body {
+}
+
+#title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#box{
+    margin: 0 auto;
+    width: 70%;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+
+#appointment-list{
+    background-color: lightblue;
+    width: 50%;
+    height: 150px;
+    float: left;
+    list-style: none;
+    font-family: Helvetica;
+    font-size: large;
+
+
+}
+
+#appointment-details{
+    background-color: lightblue;
+    height: 150px;
+    font-size: large;
+
+}
+
+.clean-lists{
+    list-style: none;
+}
+
