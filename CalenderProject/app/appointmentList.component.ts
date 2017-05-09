@@ -22,18 +22,30 @@ import { DataService } from "./data-service";
                    </ul>
                     
                 </div>
-                <div>
-                    <label>Appointment Description:</label><input #desc/>
-                    <label>Date</label><input #date/>
-                    <label>Organizer</label><input #organizer/>
-                    <label>Attendees</label><input #attendees/>
-                    <button (click)="add(desc.value, date.value, organizer.value, attendees.value);">
+                <button (click)="show = !show">{{show ? 'Hide' : 'Add'}}</button>
+                <div *ngIf="show">
+                        <label>Description:</label><br/><input #desc/> <br />
+                        <label>Date</label><br/><input #date/> <br />
+                        <label>Organizer</label><br/><input #organizer/> <br />
+                        <label>Attendees</label><br/><input #attendees/> <br />
+                    <button id="innerAddBtn" (click)="add(desc.value, date.value, organizer.value, attendees.value);">
                         Add
                     </button>
-                </div>`
+                </div>`,
+    styles: [`
+        .rightAptInputs{
+        }
+        .floatLeftInputs{
+       }
+        #innerAddBtn{
+            
+        }
+    `]
 })
 
 export class AppointmentList {
+
+    show: boolean = false;
 
     @Input() appointments: Array<Appointment>;
     @Input() appointment: Appointment;

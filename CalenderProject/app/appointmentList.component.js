@@ -27,6 +27,7 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
             let AppointmentList = class AppointmentList {
                 constructor(dataService) {
                     this.dataService = dataService;
+                    this.show = false;
                 }
                 showDetails(apt) {
                     this.appointment = apt;
@@ -66,15 +67,25 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
                    </ul>
                     
                 </div>
-                <div>
-                    <label>Appointment Description:</label><input #desc/>
-                    <label>Date</label><input #date/>
-                    <label>Organizer</label><input #organizer/>
-                    <label>Attendees</label><input #attendees/>
-                    <button (click)="add(desc.value, date.value, organizer.value, attendees.value);">
+                <button (click)="show = !show">{{show ? 'Hide' : 'Add'}}</button>
+                <div *ngIf="show">
+                        <label>Description:</label><br/><input #desc/> <br />
+                        <label>Date</label><br/><input #date/> <br />
+                        <label>Organizer</label><br/><input #organizer/> <br />
+                        <label>Attendees</label><br/><input #attendees/> <br />
+                    <button id="innerAddBtn" (click)="add(desc.value, date.value, organizer.value, attendees.value);">
                         Add
                     </button>
-                </div>`
+                </div>`,
+                    styles: [`
+        .rightAptInputs{
+        }
+        .floatLeftInputs{
+       }
+        #innerAddBtn{
+            
+        }
+    `]
                 }), 
                 __metadata('design:paramtypes', [data_service_1.DataService])
             ], AppointmentList);
