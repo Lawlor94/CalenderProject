@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./appointment.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "./appointment", "./data-service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,20 +10,31 @@ System.register(["angular2/core", "./appointment.component"], function(exports_1
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appointment_component_1;
+    var core_1, appointment_1, data_service_1;
     var AppointmentList;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (appointment_component_1_1) {
-                appointment_component_1 = appointment_component_1_1;
+            function (appointment_1_1) {
+                appointment_1 = appointment_1_1;
+            },
+            function (data_service_1_1) {
+                data_service_1 = data_service_1_1;
             }],
         execute: function() {
-            AppointmentList = class AppointmentList {
+            let AppointmentList = class AppointmentList {
+                constructor(dataService) {
+                    this.dataService = dataService;
+                }
                 showDetails(apt) {
                     this.appointment = apt;
+                }
+                add(desc, date, organizer, attendees) {
+                    var aptDate = new Date(date);
+                    var apt = new appointment_1.Appointment(desc, aptDate, organizer, attendees);
+                    this.dataService.addAppointment(apt);
                 }
             };
             __decorate([
@@ -32,7 +43,7 @@ System.register(["angular2/core", "./appointment.component"], function(exports_1
             ], AppointmentList.prototype, "appointments", void 0);
             __decorate([
                 core_1.Input(), 
-                __metadata('design:type', appointment_component_1.Appointment)
+                __metadata('design:type', appointment_1.Appointment)
             ], AppointmentList.prototype, "appointment", void 0);
             AppointmentList = __decorate([
                 core_1.Component({
@@ -53,10 +64,19 @@ System.register(["angular2/core", "./appointment.component"], function(exports_1
                         <li class="cleanLists">{{appointment.organizer}}</li>
                         <li class="cleanLists">{{appointment.attendees}}</li>
                    </ul>
-
+                    
+                </div>
+                <div>
+                    <label>Appointment Description:</label><input #desc/>
+                    <label>Date</label><input #date/>
+                    <label>Organizer</label><input #organizer/>
+                    <label>Attendees</label><input #attendees/>
+                    <button (click)="add(desc.value, date.value, organizer.value, attendees.value);">
+                        Add
+                    </button>
                 </div>`
                 }), 
-                __metadata('design:paramtypes', [])
+                __metadata('design:paramtypes', [data_service_1.DataService])
             ], AppointmentList);
             exports_1("AppointmentList", AppointmentList);
         }

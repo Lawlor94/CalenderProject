@@ -26,11 +26,16 @@ namespace CalenderProject
         {
             //AppointmentGenerator ag = new AppointmentGenerator();
             //return ag.getAppointmentsInMonth(month);
-            //adsad
 
             
 
             return new JavaScriptSerializer().Serialize(AppointmentGenerator.getAppointmentsInMonth(month));
+        }
+
+        [WebMethod]
+        public string helloWorld()
+        {
+            return "Hello World!";
         }
     }
 }

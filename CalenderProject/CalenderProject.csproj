@@ -145,9 +145,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
-    <TypeScriptCompile Include="app\appointment.component.ts" />
+    <TypeScriptCompile Include="app\appointment.ts" />
     <TypeScriptCompile Include="app\appointmentList.component.ts" />
     <TypeScriptCompile Include="app\boot.ts" />
+    <TypeScriptCompile Include="app\data-service.ts" />
     <TypeScriptCompile Include="app\months.component.ts" />
   </ItemGroup>
   <ItemGroup>

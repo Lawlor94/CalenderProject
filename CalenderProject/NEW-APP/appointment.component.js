@@ -18,7 +18,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            Appointment = class Appointment {
+            let Appointment = class Appointment {
                 constructor(description, date, organizer, attendees) {
                     this.description = description;
                     this.date = date;

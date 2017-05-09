@@ -1,5 +1,6 @@
 ﻿import { Input, Output, Component } from "angular2/core";
-import { Appointment } from "./appointment.component";
+import { Appointment } from "./appointment";
+import { DataService } from "./data-service";
 
 @Component({
     selector: "appointmentList",
@@ -19,7 +20,16 @@ import { Appointment } from "./appointment.component";
                         <li class="cleanLists">{{appointment.organizer}}</li>
                         <li class="cleanLists">{{appointment.attendees}}</li>
                    </ul>
-
+                    
+                </div>
+                <div>
+                    <label>Appointment Description:</label><input #desc/>
+                    <label>Date</label><input #date/>
+                    <label>Organizer</label><input #organizer/>
+                    <label>Attendees</label><input #attendees/>
+                    <button (click)="add(desc.value, date.value, organizer.value, attendees.value);">
+                        Add
+                    </button>
                 </div>`
 })
 
@@ -28,8 +38,24 @@ export class AppointmentList {
     @Input() appointments: Array<Appointment>;
     @Input() appointment: Appointment;
 
+    apts: Appointment[];
+
 
     showDetails(apt) {
         this.appointment = apt;
     }
+
+   constructor(private dataService: DataService) { }
+
+
+    add(desc: string, date: string, organizer: string, attendees: string) {
+
+        var aptDate = new Date(date);
+
+        var apt = new Appointment(desc, aptDate, organizer, attendees);
+
+        this.dataService.addAppointment(apt);
+    }
+
 }
+
