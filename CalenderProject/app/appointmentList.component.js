@@ -73,18 +73,11 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
                         <label>Date</label><br/><input #date/> <br />
                         <label>Organizer</label><br/><input #organizer/> <br />
                         <label>Attendees</label><br/><input #attendees/> <br />
-                    <button id="innerAddBtn" (click)="add(desc.value, date.value, organizer.value, attendees.value);">
+                    <button (click)="add(desc.value, date.value, organizer.value, attendees.value);">
                         Add
                     </button>
                 </div>`,
                     styles: [`
-        .rightAptInputs{
-        }
-        .floatLeftInputs{
-       }
-        #innerAddBtn{
-            
-        }
     `]
                 }), 
                 __metadata('design:paramtypes', [data_service_1.DataService])
