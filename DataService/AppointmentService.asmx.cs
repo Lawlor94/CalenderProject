@@ -19,16 +19,26 @@ namespace DataService
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public string AddAppointment(string description, DateTime date, string organiser)
         {
-            return "Hello World";
-        }
+            Appointment apt = new Appointment();
+            apt.Description = description;
+            apt.Date = date;
 
-        [WebMethod]
-        public string RepeatAfterMe(string input)
-        {
-            AppointmentManager am = new AppointmentManager();
-            return am.RepeatAfterMe(input);
+            //seperate organiser name into first and last name
+            string[] stringSeperator = new string[] { " " };
+            string[] result;
+
+            result = organiser.Split(stringSeperator, StringSplitOptions.RemoveEmptyEntries);
+
+            apt.Organiser = new Contact();
+            apt.Organiser.FirstName = result[0];
+            apt.Organiser.LastName = result[1];
+
+
+
+
+            return result[0];
         }
     }
 }

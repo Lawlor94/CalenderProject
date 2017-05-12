@@ -11,8 +11,7 @@ namespace CalenderDb
     {
         static void Main(string[] args)
         {
-            AppointmentManager am = new AppointmentManager();
-            am.AddAppointment();
+            
 
         }
     }

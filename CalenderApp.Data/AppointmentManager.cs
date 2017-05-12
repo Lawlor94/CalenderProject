@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CalenderDb
 {
-    public class AppointmentManager
+    class AppointmentManager
     {
-        public void AddAppointment()
+        public void AddAppointmentConsole()
         {
             using (var db = new AppointmentContext())
             {
@@ -57,6 +57,15 @@ namespace CalenderDb
                 Console.WriteLine("Press any key to exit");
                 Console.ReadKey();
 
+            }
+        }
+
+        public void AddAppointment(Appointment apt)
+        {
+            using (var db = new AppointmentContext())
+            {
+                db.Appointments.Add(apt);
+                db.SaveChangesAsync();
             }
         }
 
