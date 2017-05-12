@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalenderProject", "CalenderProject\CalenderProject.csproj", "{A217E1CE-BF46-4F62-80CD-ADCF4D2D4C93}"
+	ProjectSection(ProjectDependencies) = postProject
+		{65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0} = {65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalenderApp.Data", "CalenderApp.Data\CalenderApp.Data.csproj", "{95469F16-1E15-421F-9A37-3EB32EB18CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService", "DataService\DataService.csproj", "{65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{95469F16-1E15-421F-9A37-3EB32EB18CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95469F16-1E15-421F-9A37-3EB32EB18CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95469F16-1E15-421F-9A37-3EB32EB18CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F1ADCC-5BFB-4BA9-AFA7-F34027222EE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

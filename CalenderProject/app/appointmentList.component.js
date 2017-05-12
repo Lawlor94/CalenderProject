@@ -1,6 +1,5 @@
-System.register(["angular2/core", "./appointment", "./data-service"], function(exports_1, context_1) {
+System.register(["angular2/core", "./appointment", "./data-service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appointment_1, data_service_1;
-    var AppointmentList;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, appointment_1, data_service_1, AppointmentList;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,8 +21,9 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
             },
             function (data_service_1_1) {
                 data_service_1 = data_service_1_1;
-            }],
-        execute: function() {
+            }
+        ],
+        execute: function () {
             AppointmentList = class AppointmentList {
                 constructor(dataService) {
                     this.dataService = dataService;
@@ -39,12 +39,12 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
                 }
             };
             __decorate([
-                core_1.Input(), 
-                __metadata('design:type', Array)
+                core_1.Input(),
+                __metadata("design:type", Array)
             ], AppointmentList.prototype, "appointments", void 0);
             __decorate([
-                core_1.Input(), 
-                __metadata('design:type', appointment_1.Appointment)
+                core_1.Input(),
+                __metadata("design:type", appointment_1.Appointment)
             ], AppointmentList.prototype, "appointment", void 0);
             AppointmentList = __decorate([
                 core_1.Component({
@@ -79,11 +79,11 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
                 </div>`,
                     styles: [`
     `]
-                }), 
-                __metadata('design:paramtypes', [data_service_1.DataService])
+                }),
+                __metadata("design:paramtypes", [data_service_1.DataService])
             ], AppointmentList);
             exports_1("AppointmentList", AppointmentList);
         }
-    }
+    };
 });
 //# sourceMappingURL=appointmentList.component.js.map

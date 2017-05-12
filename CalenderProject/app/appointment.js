@@ -1,10 +1,10 @@
-System.register([], function(exports_1, context_1) {
+System.register([], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var Appointment;
     return {
-        setters:[],
-        execute: function() {
+        setters: [],
+        execute: function () {
             Appointment = class Appointment {
                 constructor(description, date, organizer, attendees) {
                     this.description = description;
@@ -15,6 +15,6 @@ System.register([], function(exports_1, context_1) {
             };
             exports_1("Appointment", Appointment);
         }
-    }
+    };
 });
 //# sourceMappingURL=appointment.js.map
