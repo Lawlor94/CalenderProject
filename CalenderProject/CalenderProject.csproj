@@ -130,8 +130,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appointment.cs" />
-    <Compile Include="AppointmentGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\TestService\Reference.cs">
       <AutoGen>True</AutoGen>

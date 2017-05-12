@@ -24,7 +24,7 @@ System.register(["angular2/core", "./appointment", "./data-service"], function(e
                 data_service_1 = data_service_1_1;
             }],
         execute: function() {
-            let AppointmentList = class AppointmentList {
+            AppointmentList = class AppointmentList {
                 constructor(dataService) {
                     this.dataService = dataService;
                     this.show = false;

@@ -18,7 +18,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            let AppointmentList = class AppointmentList {
+            AppointmentList = class AppointmentList {
             };
             __decorate([
                 core_1.Input(), 

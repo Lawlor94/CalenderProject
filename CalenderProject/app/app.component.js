@@ -21,7 +21,7 @@ System.register(["angular2/core", "./months.component"], function(exports_1, con
                 months_component_1 = months_component_1_1;
             }],
         execute: function() {
-            let AppComponent = class AppComponent {
+            AppComponent = class AppComponent {
             };
             AppComponent = __decorate([
                 core_1.Component({

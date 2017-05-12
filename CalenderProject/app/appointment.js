@@ -5,14 +5,14 @@ System.register([], function(exports_1, context_1) {
     return {
         setters:[],
         execute: function() {
-            class Appointment {
+            Appointment = class Appointment {
                 constructor(description, date, organizer, attendees) {
                     this.description = description;
                     this.date = date;
                     this.organizer = organizer;
                     this.attendees = attendees;
                 }
-            }
+            };
             exports_1("Appointment", Appointment);
         }
     }

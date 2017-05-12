@@ -22,7 +22,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 { description: "Doctor", date: new Date("1, 14, 2017"), organizer: "Jared Walsh", attendees: "Ms. Gregary, Jonathan Sheehan" },
                 { description: "Project Meeting", date: new Date("6, 19, 2017"), organizer: "Jim Berne", attendees: "Robbie Neilson" }
             ];
-            let DataService = class DataService {
+            DataService = class DataService {
                 getAppointments(month) {
                     var num = 0;
                     for (let apt of APTS) {

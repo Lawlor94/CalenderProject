@@ -24,7 +24,7 @@ System.register(["angular2/core", "./appointmentList.component", "./appointment.
                 appointment_component_1 = appointment_component_1_1;
             }],
         execute: function() {
-            let Months = class Months {
+            Months = class Months {
                 constructor() {
                     this.months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
                 }
